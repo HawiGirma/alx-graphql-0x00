@@ -28,3 +28,34 @@ query {
     gender
   }
 }
+```
+
+# Paginated Character List
+
+This project retrieves paginated character lists from the Rick and Morty GraphQL API.
+
+## Files
+- `characters-page-1.graphql` → Query for page 1
+- `characters-page-1-output.json` → Output for page 1
+- `characters-page-2.graphql` → Query for page 2
+- `characters-page-2-output.json` → Output for page 2
+- `characters-page-3.graphql` → Query for page 3
+- `characters-page-3-output.json` → Output for page 3
+- `characters-page-4.graphql` → Query for page 4
+- `characters-page-4-output.json` → Output for page 4
+
+## Endpoint
+[https://rickandmortyapi.com/graphql](https://rickandmortyapi.com/graphql)
+
+## Example Query
+```graphql
+query {
+  characters(page: 1) {
+    results {
+      id
+      name
+      status
+      image
+    }
+  }
+}
